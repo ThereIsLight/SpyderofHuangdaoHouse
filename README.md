@@ -1,5 +1,3 @@
-[TOC]
-
 ##第三周周五  2017年3月10日16:33:02
 
 ####进度:完成从[链家二手房网站](http://qd.lianjia.com/ershoufang/huangdao/)爬取二手房数据数据，并且写入到MySQL数据库。
