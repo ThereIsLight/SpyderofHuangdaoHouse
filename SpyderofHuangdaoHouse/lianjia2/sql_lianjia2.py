@@ -18,7 +18,7 @@ class SQLLianjia2:
     @classmethod
     def insert_data(cls, name, price, aver, build_time, subdistrict, community, source, link, area, house_type, floor,
                     decoration, orientation, build_type, structure, use):
-        sql = "INSERT INTO data (`name`, `price`, `aver`, `build_time`, `subdistrict`, `community`, `source`, " \
+        sql = "INSERT INTO baseinfo (`name`, `price`, `aver`, `build_time`, `subdistrict`, `community`, `source`, " \
               "`link`, `area`, `house_type`, `floor`, `decoration`, `orientation`, `build_type`, `structure`, `use` ) " \
               "VALUES (%(name)s, %(price)s, %(aver)s, %(build_time)s, %(subdistrict)s, %(community)s, %(source)s, " \
               "%(link)s, %(area)s, %(house_type)s, %(floor)s, %(decoration)s, %(orientation)s, %(build_type)s, " \
