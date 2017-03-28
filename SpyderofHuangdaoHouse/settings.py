@@ -142,8 +142,8 @@ DOWNLOADER_MIDDLEWARES = {
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'SpyderofHuangdaoHouse.pipelines.SpyderofhuangdaohousePipeline': 300,
-    'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke.AnjukePipeline': 300,
-    # 'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke2.Anjuke2Pipeline': 300,
+   #  'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke.AnjukePipeline': 300,
+    'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke2.Anjuke2Pipeline': 300,
    #  'SpyderofHuangdaoHouse.pipelines.pipeline_lianjia2.Lianjia2Pipeline': 300,
 }
 

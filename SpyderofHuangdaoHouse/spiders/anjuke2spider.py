@@ -33,21 +33,22 @@ class Anjuke2Spider(scrapy.Spider):
     def start_requests(self):
         for i in range(1, 51):  #在页面中找不到最后一页，只能用现成的数字。
         # for i in range(1, 2):  # test
-            page_url = self.head_url + 'p' + str(i)
+            page_url = self.head_url + 'p' + str(i) + '/'
             yield Request(page_url)
 
     def parse(self, response):
-        """
+
         lis = response.xpath('//*[@id="houselist-mod"]/li')
         for li in lis:
             info_url = li.xpath("div[2]/div[1]/a/@href").extract()[0]  # /只能选取当前结点的子节点，不能选择孙节点。
-            print(info_url)
-            # yield Request(info_url, callback=self.get_info)
+            # print(info_url)
+            yield Request(info_url, callback=self.get_info)
         """
         li = response.xpath('//*[@id="houselist-mod"]/li')
         info_url = li.xpath("div[2]/div[1]/a/@href").extract()[0]
         # print(info_url)
         yield Request(info_url, callback=self.get_info)
+        """
 
     def get_info(self, response):
         """
