@@ -1,11 +1,11 @@
 import base64
 
 # 代理服务器
-proxyServer = "http://proxy.abuyun.com:9010"
+proxyServer = "http://proxy.abuyun.com:9020"
 
 # 代理隧道验证信息
-proxyUser = "HP508L18K654WPPP"
-proxyPass = "67D075A4D67385B0"
+proxyUser = "HMMI364BA5LVU74D"
+proxyPass = "DA0DB2CECFEB7894"
 
 # for Python2
 # proxyAuth = "Basic " + base64.b64encode(proxyUser + ":" + proxyPass)

@@ -142,7 +142,9 @@ DOWNLOADER_MIDDLEWARES = {
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'SpyderofHuangdaoHouse.pipelines.SpyderofhuangdaohousePipeline': 300,
-   'SpyderofHuangdaoHouse.lianjia2.pipeline_lianjia2.Lianjia2Pipeline': 300,
+    'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke.AnjukePipeline': 300,
+    # 'SpyderofHuangdaoHouse.pipelines.pipeline_anjuke2.Anjuke2Pipeline': 300,
+   #  'SpyderofHuangdaoHouse.pipelines.pipeline_lianjia2.Lianjia2Pipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -166,9 +168,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-# Data Base
-MYSQL_HOSTS = '127.0.0.1'
-MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'yg19940916'
-MYSQL_PORT = '3306'
-MYSQL_DB = 'lianjia2'

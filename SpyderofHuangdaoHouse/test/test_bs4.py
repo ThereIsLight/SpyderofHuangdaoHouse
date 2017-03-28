@@ -5,9 +5,8 @@ html = """
     World
 </li>
 """
+
 soup = BeautifulSoup(html, "lxml")
-a = BeautifulSoup(html, "lxml").find('li').contents
-# a = soup.find('li')
-# print(a.contents[-1].strip())
+a = soup.find('li').find('span').get_text().extract()
+# a = soup.find('li').find('li').get_text().extract()
 print(a)
-# print(b)

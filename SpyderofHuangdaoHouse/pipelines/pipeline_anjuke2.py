@@ -1,16 +1,16 @@
-from .sql_lianjia2 import SQLLianjia2
-from SpyderofHuangdaoHouse.items import Lianjia2Item
+from SpyderofHuangdaoHouse.items import ResoldHouseItem
+from .sql_anjuke2 import Anjuke2SQL
 import logging
 
 
-class Lianjia2Pipeline(object):
+class Anjuke2Pipeline(object):
 
     logger = logging.getLogger()
 
     def process_item(self, item, spider):
 
-        self.logger.info('come into pipeline!!!!!!!!!!!!!!!!!!')
-        if isinstance(item, Lianjia2Item):
+        self.logger.info('come into anjuke2 pipeline!!!!!!!!!!!!!!!!!!')
+        if isinstance(item, ResoldHouseItem):
             name = item['name']
             price = item['price']
             aver = item['aver']
@@ -20,6 +20,7 @@ class Lianjia2Pipeline(object):
             floor = item['floor']
             subdistrict = item['subdistrict']
             community = item['community']
+            address = item['address']
             source = item['source']
             link = item['link']
             decoration = item['decoration']
@@ -28,4 +29,5 @@ class Lianjia2Pipeline(object):
             structure = item['structure']
             use = item['use']
             self.logger.info('start to execute sql........................')
-            SQLLianjia2.insert_data(name, price, aver, build_time, subdistrict, community, source, link, area, house_type, floor, decoration, orientation, build_type, structure, use)
+            Anjuke2SQL.insert_data(name, price, aver, build_time, subdistrict, community, address, source, link, area,
+                                   house_type, floor, decoration, orientation, build_type, structure, use)
